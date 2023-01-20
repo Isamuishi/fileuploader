@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loafs Uploader</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <br>
+    <div class="animated_rainbow_1"
+    <h1>Loafs Uploader</h1>
+
+    <!--<h3>Due to caching, all files will be removed after 2 weeks.</h3>-->
+    <form method="post" action="/upload" enctype="multipart/form-data"><br>
+    <h2>Upload a file</h2> </div>
+    <input name="file" type="file" id="input" style="display:none">
+    <input type="submit" value="Upload" id="upload">
+    <div class="animated_rainbow_1"
+    <h3>Maximum file size: 10 MB</h3><br>
+    <h3 style="display:none" id="uploading">Uploading...</h3>
+   <h5>https://magicloud.parrotdev.repl.co/ </h5> </div>
+    </form>
+    <script>
+      document.getElementById("upload").addEventListener("click", e => {
+        e.preventDefault();
+        document.getElementById("input").click();
+      });
+      document.getElementById("input").addEventListener("change", () => {
+        document.querySelector("form").submit();
+        document.getElementById("uploading").style.display = "block";
+      });
+    </script>
+  </body>
+</html>
