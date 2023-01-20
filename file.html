@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <div class="animated_rainbow_1"<p>
+    <title><%= filename %></title>
+    </div>
+    <link rel="shortcut icon" href="/cloud.png">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <article>
+    <div><br>
+      <img src="/uwu/<%= filename %>" width="500" alt="File Preview">
+      <div class="animated_rainbow_1"
+      <h1>File Info</h2>
+      <h2><%= filename %></h1>
+      <h3>File size: <%= size %></h3>
+      <h3>File type: <%= type %></h3>
+      <h3>File link:</h3> </div>
+      <input value="https://loaf.tiffygah.repl.co/uwu/<%= filename %>" type="text" readonly><br><br>
+      <div class="animated_rainbow_1"
+      <h1>File Actions</h1></div>
+      <button onclick="copyLink()" style="height:40px; margin-left:10px">Copy Link</button><button onclick="window.open('/file/<%= filename %>/download')">Download file</button><br><br>
+      <button onclick="window.open('/uwu/<%= filename %>/')">Open file</button><button onclick="location.href = '/'">Add new file</button><br><br>
+    </div>
+    </article>
+    <script>
+      function copyLink(){
+        document.querySelector("input").select();
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();
+      }
+    </script>
+  </body>
+</html>
